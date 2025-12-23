@@ -25,7 +25,7 @@ export default function Home() {
           あなたの声や演奏を、もっと自由に楽しむ
         </h1>
         <p className="text-lg md:text-xl mb-6">
-          VOCA-NICAL studioは、練習の成果をやさしく見える化し、表現の成長をサポートします。
+          VOCA-NICAL studioは、練習の成果を見える化し、表現の成長をサポートします。
         </p>
 
         {/* =================== ボタン改行対応 & WordPressリンク =================== */}
@@ -37,14 +37,14 @@ export default function Home() {
             rel="noopener noreferrer"
             className="bg-accent text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-accent/80 transition text-center"
           >
-            代表の想いを知る
+            VOCA-NICAL studioのブログ
           </a>
 
           <a
             href="/signup"
             className="bg-primary text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-primarySoft transition text-center"
           >
-            まずはやさしく体験
+            まずは体験
           </a>
         </div>
       </section>
@@ -57,7 +57,7 @@ export default function Home() {
         <ul className="list-disc list-inside space-y-4 text-lg">
           <li>練習しても成果が見えにくい</li>
           <li>音程やリズムの安定が自分では分からない</li>
-          <li>感覚だけに頼った練習の継承方法が分からない</li>
+          <li>感覚だけに頼った練習の効果が分からない</li>
         </ul>
       </section>
 
@@ -86,23 +86,23 @@ export default function Home() {
           <div className="flex flex-col items-center">
             <span className="text-5xl mb-4">📊</span>
             <h3 className="text-xl font-semibold mb-2">表現を見える化</h3>
-            <p>演奏や歌声の特徴をやさしく表示し、改善のヒントに。</p>
+            <p>演奏や歌声の特徴を表示し、改善のヒントに。</p>
           </div>
           <div className="flex flex-col items-center">
             <span className="text-5xl mb-4">✅</span>
             <h3 className="text-xl font-semibold mb-2">無理なく練習</h3>
-            <p>解析結果をもとに、次の目標をやさしく提案します。</p>
+            <p>解析結果をもとに、次の目標を提案します。</p>
           </div>
         </div>
       </section>
 
       {/* =================== 代表紹介（折りたたみ版） =================== */}
-      <section id="representative" className="px-6 md:px-24 py-16 relative z-10 text-white">
+      {/* <section id="representative" className="px-6 md:px-24 py-16 relative z-10 text-white">
         <RepresentativeProfile
           imageWidth={280}
           imageHeight={280}
         />
-      </section>
+      </section> */}
 
       {/* =================== FAQ =================== */}
       <section className="px-6 md:px-24 py-16 relative z-10 text-white">
@@ -128,10 +128,10 @@ export default function Home() {
       {/* =================== 最終CTA =================== */}
       <section className="px-6 md:px-24 py-16 text-center relative z-10 text-white">
         <h2 className="text-4xl md:text-5xl font-bold mb-6">
-          まずはやさしく VOCA-NICAL を体験
+          まずは VOCA-NICAL を体験
         </h2>
         <p className="text-lg mb-8">
-          あなたの演奏や歌声を解析し、練習の成果をやさしく見える化します。
+          あなたの演奏や歌声を解析し、練習の成果を見える化します。
         </p>
         <a
           href="/signup"
