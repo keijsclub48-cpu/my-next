@@ -1,140 +1,137 @@
+import RepresentativeProfile from "@/components/RepresentativeProfile";
 import Image from "next/image";
-import FVImage from "../public/fv_image.png"; // 生成AI画像を置く
+import firstViewImg from "../public/fv_image.png"; // ファーストビュー画像
 
 export default function Home() {
   return (
-    <main className="bg-[#e0e7ff] text-gray-900 font-sans">
-      {/* ファーストビュー */}
-      <section className="flex flex-col md:flex-row items-center justify-between px-6 md:px-24 py-16">
-        {/* 左コピー */}
-        <div className="md:w-1/2 mb-8 md:mb-0">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-snug">
-            声や音程を、<br />
-            もっと「感覚」ではなく「安心」に。
+    <main className="bg-bg-main text-text-main">
+
+      {/* =================== ファーストビュー =================== */}
+      <section id="top" className="bg-[#e0e7ff] flex flex-col-reverse md:flex-row items-center px-6 md:px-24 py-16 md:py-32 gap-10">
+        <div className="flex-1 text-center md:text-left">
+          <h1 className="text-4xl md:text-5xl font-bold mb-4 text-brand-primary">
+            音楽と技術で未来の表現をつなぐ
           </h1>
           <p className="text-lg md:text-xl mb-6">
-            歌・発声・楽器練習のためのやさしい音程チェックツール
+            VOCA-NICAL studioは、演奏や声の感覚を次世代へ継承する
+            リアルタイム解析・可視化技術を提供します。
           </p>
-          <a
-            href="https://mms.voca-nical.com"
-            className="inline-block bg-teal-400 text-white px-8 py-3 rounded-lg text-lg font-semibold hover:bg-teal-500 transition"
-          >
-            今すぐ測ってみる
-          </a>
+          <div className="flex flex-col md:flex-row justify-center md:justify-start gap-4">
+            <a
+              href="#representative"
+              className="bg-brand-accent text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-[#b28c3c] transition"
+            >
+              代表紹介を見る
+            </a>
+            <a
+              href="/signup"
+              className="bg-brand-primary text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-[#173153] transition"
+            >
+              無料で体験する
+            </a>
+          </div>
         </div>
-        {/* 右画像 */}
-        <div className="md:w-1/2">
+
+        <div className="flex-1 flex justify-center">
           <Image
-            src={FVImage}
-            alt="Voca-nical ファーストビュー"
-            className="rounded-xl shadow-lg"
-            width={500}
-            height={500}
+            src={firstViewImg}
+            alt="ファーストビュー"
+            className="rounded-xl shadow-lg max-w-full h-auto"
           />
         </div>
       </section>
 
-      {/* 共感・課題 */}
-      <section className="px-6 md:px-24 py-12 bg-white">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">こんなことで困っていませんか？</h2>
-        <ul className="list-disc list-inside space-y-2 text-lg">
-          <li>音程が合っているか分からない</li>
-          <li>チューナーは数字や針が難しい</li>
-          <li>練習の成果が実感しにくい</li>
-          <li>誰かに聞いてもらうのは気が引ける</li>
+      {/* =================== 共感・課題 =================== */}
+      <section className="px-6 md:px-24 py-16 bg-white">
+        <h2 className="text-3xl font-bold mb-8 text-brand-primary border-b-4 border-brand-primary pb-2">
+          こんな悩みありませんか？
+        </h2>
+        <ul className="list-disc list-inside space-y-4 text-lg text-text-main">
+          <li>練習の成果を可視化できない</li>
+          <li>音程や表現の安定度を客観的に評価したい</li>
+          <li>感覚に頼った演奏の継承方法が分からない</li>
         </ul>
-        <p className="mt-4 text-lg">
-          Voca-nical は、ひとりで落ち着いて確認できる音楽練習ツールです。
-        </p>
       </section>
 
-      {/* できること */}
-      <section className="px-6 md:px-24 py-12 bg-[#f0f4ff]">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-8">Voca-nicalでできること</h2>
-        <div className="grid md:grid-cols-3 gap-8 text-center">
-          <div>
-            <div className="text-4xl mb-4">🎵</div>
-            <h3 className="font-semibold text-xl mb-2">今の音程が分かる</h3>
-            <p>声や音を出すだけで、今の高さを画面で確認できます。</p>
+      {/* =================== できること =================== */}
+      <section className="px-6 md:px-24 py-16 bg-[#f0f4ff] text-center">
+        <h2 className="text-3xl font-bold mb-12 text-brand-primary border-b-4 border-brand-primary pb-2 inline-block">
+          VOCA-NICALでできること
+        </h2>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="flex flex-col items-center">
+            <span className="text-5xl mb-4">🎵</span>
+            <h3 className="text-xl font-semibold mb-2">音程チェック</h3>
+            <p>リアルタイムで音程を解析し、演奏の安定度を確認できます。</p>
           </div>
-          <div>
-            <div className="text-4xl mb-4">📊</div>
-            <h3 className="font-semibold text-xl mb-2">安定しているかが分かる</h3>
-            <p>揺れやブレも見えて、練習の安心感を得られます。</p>
+          <div className="flex flex-col items-center">
+            <span className="text-5xl mb-4">📊</span>
+            <h3 className="text-xl font-semibold mb-2">演奏分析</h3>
+            <p>リズムやフレージングの統計を可視化し、改善点を把握できます。</p>
           </div>
-          <div>
-            <div className="text-4xl mb-4">✅</div>
-            <h3 className="font-semibold text-xl mb-2">練習の目安がつく</h3>
-            <p>今日の成果がひと目でわかり、効率的に練習できます。</p>
+          <div className="flex flex-col items-center">
+            <span className="text-5xl mb-4">✅</span>
+            <h3 className="text-xl font-semibold mb-2">練習プラン</h3>
+            <p>解析結果をもとに、効率的な練習目標を提示します。</p>
           </div>
         </div>
       </section>
 
-      {/* 使い方 */}
-      <section className="px-6 md:px-24 py-12 bg-white">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">使い方は簡単3ステップ</h2>
-        <ol className="list-decimal list-inside space-y-2 text-lg">
-          <li>マイクを許可する</li>
-          <li>声や音を出す</li>
-          <li>画面を見る</li>
-        </ol>
-        <p className="mt-4">操作はこれだけ。面倒な設定や音楽理論は不要です。</p>
-      </section>
-
-      {/* こんな方におすすめ */}
-      <section className="px-6 md:px-24 py-12 bg-[#f0f4ff]">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">こんな方におすすめ</h2>
-        <ul className="list-disc list-inside space-y-2 text-lg">
-          <li>歌うことが好きな方</li>
-          <li>ボーカル練習中の方</li>
-          <li>合唱・コーラス参加者</li>
-          <li>楽器の音程確認をしたい方</li>
-          <li>レッスン以外の自主練習を充実させたい方</li>
-        </ul>
-      </section>
-
-      {/* 運営・代表 */}
-      <section className="px-6 md:px-24 py-12 bg-white">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-4">このサービスについて</h2>
-        <p className="text-lg mb-4">
-          Voca-nical は、音楽に関わる現場経験と Web開発の知見をもとに制作されています。
-        </p>
-        <p className="text-lg mb-2">
-          「音程や声の状態を、もっと安心して確認できる環境があれば」という思いから、このサービスを立ち上げました。
-        </p>
-        <a href="/about" className="text-teal-500 underline hover:text-teal-600">
-          代表プロフィールを見る
-        </a>
-      </section>
-
-      {/* FAQ */}
-      <section className="px-6 md:px-24 py-12 bg-[#f0f4ff]">
-        <h2 className="text-2xl md:text-3xl font-semibold mb-6">よくある質問</h2>
-        <dl className="space-y-4 text-lg">
-          <dt className="font-semibold">Q. 無料ですか？</dt>
-          <dd>基本機能は無料でご利用いただけます。</dd>
-
-          <dt className="font-semibold">Q. 登録は必要ですか？</dt>
-          <dd>登録なしですぐに使えます。</dd>
-
-          <dt className="font-semibold">Q. スマホでも使えますか？</dt>
-          <dd>スマホ・PCどちらでも利用できます。</dd>
-
-          <dt className="font-semibold">Q. 楽器でも使えますか？</dt>
-          <dd>はい。声以外の音にも対応しています。</dd>
-        </dl>
-      </section>
-
-      {/* 最終CTA */}
-      <section className="px-6 md:px-24 py-16 text-center bg-white">
-        <h2 className="text-3xl md:text-4xl font-bold mb-6">
-          まずは、今の声・音をそっと確認してみませんか？
+      {/* =================== 使い方 =================== */}
+      <section className="px-6 md:px-24 py-16 bg-white">
+        <h2 className="text-3xl font-bold mb-12 text-brand-primary border-b-4 border-brand-primary pb-2 inline-block">
+          使い方は簡単3ステップ
         </h2>
+        <ol className="space-y-8 text-lg text-text-main">
+          <li>
+            <span className="font-semibold">Step 1:</span> アプリを起動して演奏・歌声を録音
+          </li>
+          <li>
+            <span className="font-semibold">Step 2:</span> 音程・リズム・表現をリアルタイム解析
+          </li>
+          <li>
+            <span className="font-semibold">Step 3:</span> 結果をもとに練習目標を確認
+          </li>
+        </ol>
+      </section>
+
+      {/* =================== 代表紹介（折りたたみ版） =================== */}
+      <RepresentativeProfile />
+
+      {/* =================== FAQ =================== */}
+      <section className="px-6 md:px-24 py-16 bg-[#f0f4ff]">
+        <h2 className="text-3xl font-bold mb-8 text-brand-primary border-b-4 border-brand-primary pb-2 inline-block">
+          よくある質問
+        </h2>
+        <div className="space-y-6 text-text-main text-lg">
+          <div>
+            <p className="font-semibold">Q: アプリは無料ですか？</p>
+            <p>A: 基本機能は無料でご利用いただけます。プレミアム機能も検討中です。</p>
+          </div>
+          <div>
+            <p className="font-semibold">Q: iOS / Android 両方対応ですか？</p>
+            <p>A: はい、ブラウザ版でスマホ・タブレットで利用可能です。</p>
+          </div>
+          <div>
+            <p className="font-semibold">Q: 音声解析はどのくらい正確ですか？</p>
+            <p>A: 最新AIモデルを使用しており、プロ演奏レベルにも対応しています。</p>
+          </div>
+        </div>
+      </section>
+
+      {/* =================== 最終CTA =================== */}
+      <section className="px-6 md:px-24 py-16 bg-white text-center">
+        <h2 className="text-4xl md:text-5xl font-bold mb-6 text-brand-primary">
+          今すぐ VOCA-NICAL を体験
+        </h2>
+        <p className="text-lg mb-8">
+          あなたの演奏・歌声をリアルタイムで解析し、練習の成果を可視化します。
+        </p>
         <a
-          href="https://mms.voca-nical.com"
-          className="inline-block bg-teal-400 text-white px-10 py-4 rounded-lg text-xl font-semibold hover:bg-teal-500 transition"
+          href="/signup"
+          className="inline-block bg-brand-accent text-white font-semibold py-4 px-8 rounded-lg shadow hover:bg-[#b28c3c] transition"
         >
-          無料で測ってみる
+          無料で体験する
         </a>
       </section>
     </main>
