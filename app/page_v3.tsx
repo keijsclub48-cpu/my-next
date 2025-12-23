@@ -4,7 +4,7 @@ import Image from "next/image";
 
 export default function Home() {
   return (
-    <main className="relative w-full min-h-screen font-sans p-6 md:p-12">
+    <main className="relative w-full min-h-screen font-sans">
 
       {/* 背景画像（淡いパステル＋ジャズ風オーバーレイ） */}
       <div className="absolute inset-0 -z-10 w-full h-full">
@@ -19,15 +19,7 @@ export default function Home() {
       <div className="absolute inset-0 -z-5 w-full h-full bg-black/10"></div>
 
       {/* ファーストビュー */}
-      {/* <section className="px-6 md:px-24 py-16 md:py-32 relative z-10 text-white text-center md:text-left"> */}
-      <section className="
-        relative z-10 text-white
-        text-center md:text-left
-        pt-[2em] md:pt-[3em]
-        px-[1.5em] md:px-[4em]
-        pb-16
-      ">
-      
+      <section className="px-6 md:px-24 py-16 md:py-32 relative z-10 text-white text-center md:text-left">
         <h1 className="text-4xl md:text-5xl font-bold mb-4">
           あなたの声や演奏を、もっと自由に楽しむ
         </h1>
@@ -56,18 +48,16 @@ export default function Home() {
       </section>
 
       {/* 共感・課題 */}
-<section className="py-16 px-[1.5em] md:px-[4em] relative z-10 text-white">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-3xl font-bold mb-8 border-b-4 border-white pb-2 inline-block">
-      こんなお悩み、ありませんか？
-    </h2>
-    <ul className="list-disc list-inside space-y-4 text-lg">
-      <li>練習しても成果が見えにくい</li>
-      <li>音程やリズムの安定が自分では分からない</li>
-      <li>感覚だけに頼った練習の効果が分からない</li>
-    </ul>
-  </div>
-</section>
+      <section className="px-6 md:px-24 py-16 relative z-10 text-white">
+        <h2 className="text-3xl font-bold mb-8 border-b-4 border-white pb-2 inline-block">
+          こんなお悩み、ありませんか？
+        </h2>
+        <ul className="list-disc list-inside space-y-4 text-lg">
+          <li>練習しても成果が見えにくい</li>
+          <li>音程やリズムの安定が自分では分からない</li>
+          <li>感覚だけに頼った練習の効果が分からない</li>
+        </ul>
+      </section>
 
       {/* アプリ画面 */}
       <section className="flex justify-center py-16 relative z-10">
@@ -105,28 +95,25 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-<section className="py-16 px-[1.5em] md:px-[4em] relative z-10 text-white">
-  <div className="max-w-6xl mx-auto">
-    <h2 className="text-3xl font-bold mb-8 border-b-4 border-white pb-2 inline-block">
-      よくある質問
-    </h2>
-
-    <div className="space-y-6 text-lg">
-      <div>
-        <p className="font-semibold">Q: アプリは無料ですか？</p>
-        <p>A: 基本機能は無料で体験できます。</p>
-      </div>
-      <div>
-        <p className="font-semibold">Q: スマホでも使えますか？</p>
-        <p>A: はい、ブラウザ版でiOS/Android両方対応です。</p>
-      </div>
-      <div>
-        <p className="font-semibold">Q: 音声解析の精度は？</p>
-        <p>A: プロ演奏レベルにも対応できるAI解析を採用しています。</p>
-      </div>
-    </div>
-  </div>
-</section>
+      <section className="px-6 md:px-24 py-16 relative z-10 text-white">
+        <h2 className="text-3xl font-bold mb-8 border-b-4 border-white pb-2 inline-block">
+          よくある質問
+        </h2>
+        <div className="space-y-6 text-lg">
+          <div>
+            <p className="font-semibold">Q: アプリは無料ですか？</p>
+            <p>A: 基本機能は無料で体験できます。</p>
+          </div>
+          <div>
+            <p className="font-semibold">Q: スマホでも使えますか？</p>
+            <p>A: はい、ブラウザ版でiOS/Android両方対応です。</p>
+          </div>
+          <div>
+            <p className="font-semibold">Q: 音声解析の精度は？</p>
+            <p>A: プロ演奏レベルにも対応できるAI解析を採用しています。</p>
+          </div>
+        </div>
+      </section>
 
       {/* 最終CTA */}
       <section className="px-6 md:px-24 py-16 text-center relative z-10 text-white">
