@@ -75,7 +75,7 @@ export default function Home() {
           src="/mockup_phone.png"
           alt="アプリ画面イメージ"
           width={300}
-          height={600}
+          height={450}
           className="rounded-xl shadow-2xl"
         />
       </section>
