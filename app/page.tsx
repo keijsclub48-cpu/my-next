@@ -32,7 +32,7 @@ export default function Home() {
           あなたの声や演奏を、もっと自由に楽しむ
         </h1>
         <p className="text-lg md:text-xl mb-6">
-          VOCA-NICAL studioは、練習の成果を見える化し、表現の成長をサポートします。
+          VOCA-NICALは、練習の成果を見える化し、表現の成長をサポートします。
         </p>
 
         {/* ボタン */}
