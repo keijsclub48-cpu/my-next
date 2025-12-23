@@ -7,43 +7,45 @@ export default function Home() {
   return (
     <main className="relative w-full min-h-screen font-sans">
 
-      {/* 背景画像 */}
+      {/* =================== 背景画像（淡いパステル＋ジャズ風オーバーレイ） =================== */}
       <div className="absolute inset-0 -z-10 w-full h-full">
         <Image
-          src="/A_digital_illustration_in_soft_pastel_colors_featu.png"
-          alt="背景画像"
+          src="/A_digital_illustration_in_soft_pastel_colors_featu.png" // 淡いパステルトーン背景
+          alt="抽象的背景"
           fill
           style={{ objectFit: "cover" }}
           priority
         />
       </div>
-
-      {/* 半透明オーバーレイ */}
-      <div className="absolute inset-0 -z-5 w-full h-full bg-black/20"></div>
+      <div className="absolute inset-0 -z-5 w-full h-full bg-black/10"></div> {/* 軽いオーバーレイで文字の可読性確保 */}
 
       {/* =================== ファーストビュー =================== */}
-      <section className="flex flex-col-reverse md:flex-row items-center px-6 md:px-24 py-16 md:py-32 gap-10 relative z-10 text-white">
-        <div className="flex-1 text-center md:text-left">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">
-            あなたの声や演奏を、もっと自由に楽しむ
-          </h1>
-          <p className="text-lg md:text-xl mb-6">
-            VOCA-NICAL studioは、練習の成果をやさしく見える化し、表現の成長をサポートします。
-          </p>
-          <div className="flex flex-col md:flex-row justify-center md:justify-start gap-4">
-            <a
-              href="#representative"
-              className="bg-accent text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-accent/80 transition"
-            >
-              代表の想いを知る
-            </a>
-            <a
-              href="/signup"
-              className="bg-primary text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-primarySoft transition"
-            >
-              まずはやさしく体験
-            </a>
-          </div>
+      <section className="px-6 md:px-24 py-16 md:py-32 relative z-10 text-white text-center md:text-left">
+        <h1 className="text-4xl md:text-5xl font-bold mb-4">
+          あなたの声や演奏を、もっと自由に楽しむ
+        </h1>
+        <p className="text-lg md:text-xl mb-6">
+          VOCA-NICAL studioは、練習の成果をやさしく見える化し、表現の成長をサポートします。
+        </p>
+
+        {/* =================== ボタン改行対応 & WordPressリンク =================== */}
+        <div className="flex flex-col md:flex-row gap-4 justify-center md:justify-start mt-6">
+          {/* WordPress第1回ブログ投稿へのリンク */}
+          <a
+            href="https://cms.voca-nical.com/?p=1"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-accent text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-accent/80 transition text-center"
+          >
+            代表の想いを知る
+          </a>
+
+          <a
+            href="/signup"
+            className="bg-primary text-white font-semibold py-3 px-6 rounded-lg shadow hover:bg-primarySoft transition text-center"
+          >
+            まずはやさしく体験
+          </a>
         </div>
       </section>
 
@@ -57,6 +59,17 @@ export default function Home() {
           <li>音程やリズムの安定が自分では分からない</li>
           <li>感覚だけに頼った練習の継承方法が分からない</li>
         </ul>
+      </section>
+
+      {/* =================== アプリ画面イメージ =================== */}
+      <section className="flex justify-center py-16 relative z-10">
+        <Image
+          src="/mockup_phone.png"
+          alt="アプリ画面イメージ"
+          width={300}
+          height={600}
+          className="rounded-xl shadow-2xl"
+        />
       </section>
 
       {/* =================== VOCA-NICALでできること =================== */}
@@ -86,8 +99,8 @@ export default function Home() {
       {/* =================== 代表紹介（折りたたみ版） =================== */}
       <section id="representative" className="px-6 md:px-24 py-16 relative z-10 text-white">
         <RepresentativeProfile
-          imageWidth={280}   // 横幅固定
-          imageHeight={280}  // 高さ固定
+          imageWidth={280}
+          imageHeight={280}
         />
       </section>
 
